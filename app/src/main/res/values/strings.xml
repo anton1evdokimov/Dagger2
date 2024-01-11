@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DobroPomosh</string>
+    <string name="save">Save data</string>
+    <string name="get">Get data</string>
+</resources>

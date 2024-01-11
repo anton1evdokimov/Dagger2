@@ -1,0 +1,42 @@
+Index: app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/GetUserNameUseCase.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/GetUserNameUseCase.kt b/app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/GetUserNameUseCase.kt
+new file mode 100644
+--- /dev/null	(date 1702556838220)
++++ b/app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/GetUserNameUseCase.kt	(date 1702556838220)
+@@ -0,0 +1,10 @@
++package com.evdokimov.domain.usecase
++
++import com.evdokimov.domain.models.UserName
++import com.evdokimov.domain.repository.UserRepository
++
++class GetUserNameUseCase(private val userRepository: UserRepository) {
++    fun execute(): UserName {
++        return userRepository.getName()
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/SaveUserNameUseCase.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/SaveUserNameUseCase.kt b/app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/SaveUserNameUseCase.kt
+new file mode 100644
+--- /dev/null	(date 1702556838224)
++++ b/app/src/main/java/com/evdokimov/dobropomosh/domain/usecase/SaveUserNameUseCase.kt	(date 1702556838224)
+@@ -0,0 +1,10 @@
++package com.evdokimov.domain.usecase
++
++import com.evdokimov.domain.models.SaveParam
++import com.evdokimov.domain.repository.UserRepository
++
++class SaveUserNameUseCase(private val userRepository: UserRepository) {
++    fun execute(saveParam: SaveParam): Boolean {
++        return userRepository.saveName(saveParam)
++    }
++}
+\ No newline at end of file
